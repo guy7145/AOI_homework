@@ -1,0 +1,48 @@
+public class Statistics {
+    static double CalcMean(double[] array) {
+        double sum = 0;
+        for (double anArray : array) sum += anArray;
+        return sum / array.length;
+    }
+
+    static double CalcVariance(double[] array) {
+        return CalcVariance(array, CalcMean(array));
+    }
+
+    static double CalcVariance(double[] array, double mean) {
+        double variance = 0;
+        for (double anArray : array) variance += Math.pow(anArray - mean, 2);
+        return variance / array.length;
+    }
+
+    static double CalcCovariance(double[] a, double[] b) throws Exception {
+        double meanA = CalcMean(a);
+        double meanB = CalcMean(b);
+        return CalcCovariance(a, b, meanA, meanB);
+    }
+
+    static double CalcCovariance(double[] a, double[] b, double meanA, double meanB) throws Exception {
+        if (a.length != b.length) throw new Exception(
+                String.format("arrays should be the same size (%d != %d)", a.length, b.length)
+        );
+        int length = a.length;
+
+        double cov = 0;
+
+        for (int i = 0; i < length; i++)
+            cov += (a[i] - meanA) * (b[i] - meanB);
+
+        cov = cov / length;
+
+        return cov;
+    }
+
+    static double PearsonCorrCoef(double[] a, double[] b) throws Exception {
+        double meanA = CalcMean(a);
+        double meanB = CalcMean(b);
+        double varA = CalcVariance(a, meanA);
+        double varB = CalcVariance(b, meanB);
+        double cov = CalcCovariance(a, b, meanA, meanB);
+        return cov / Math.sqrt(varA * varB);
+    }
+}
