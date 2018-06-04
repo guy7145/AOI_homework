@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 class Utils {
-    static String httpGet(String url) throws Exception {
+    static String HttpGet(String url) throws Exception {
         URL obj = new URL(url);
         String inputLine;
         StringBuilder response = new StringBuilder();
@@ -19,10 +19,17 @@ class Utils {
         return response.toString();
     }
 
+    public static boolean VerifyKey(byte[] key) throws Exception {
+        String response = HttpGet(String.format(Constants.VerifyUrl, Constants.Username, ByteArrayToHex(key)));
+        if (response.equals(Constants.PasswordCorrect)) return true;
+        else if (response.equals(Constants.PasswordIncorrect)) return false;
+        else throw new Exception(String.format("Unknown response: %s", response));
+    }
+
     static String DownloadTraces(String SERVER_URL, int NB_TRACES) throws Exception {
         StringBuilder fileBuilder = new StringBuilder();
         for (int i = 0; i < NB_TRACES; i++) {
-            String jsonString = httpGet(SERVER_URL);
+            String jsonString = HttpGet(SERVER_URL);
             fileBuilder.append(jsonString);
             fileBuilder.append(System.lineSeparator());
         }
@@ -33,6 +40,12 @@ class Utils {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
             writer.write(data);
         }
+    }
+
+    public static String ByteArrayToHex(byte[] a) {
+        StringBuilder sb = new StringBuilder(a.length * 2);
+        for(byte b: a) sb.append(String.format("%02x", b));
+        return sb.toString();
     }
 
     public static byte[] hexStringToByteArray(String s) {

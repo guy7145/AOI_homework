@@ -1,5 +1,3 @@
-import com.sun.istack.internal.Nullable;
-
 class PowerConsumptionAttack {
     //    region AES S-box
     static int[] AesSbox = {
@@ -37,7 +35,9 @@ class PowerConsumptionAttack {
     }
 
     public static int HammingWeight(int num) {
-        return Integer.bitCount(num);
+        if (num > 0xff) System.out.printf("HammingWeight: %x is larger than one byte!\n", num);
+        int weight = Integer.bitCount(num);
+        return weight;
     }
 
     public static double[] IntermediateValuesToPowerConsumptions(int[] v) {
@@ -66,8 +66,8 @@ class PowerConsumptionAttack {
         System.out.printf("there are %d plaintexts\n", plaintexts.length);
 
         System.out.println("creating hypothetical power consumption...");
-        double hypotheticalPowerConsumptions[][] = new double[Constants.NB_POSSIBLE_KEY_GUESSES][numOfTraces];
-        for (int key_guess = 0; key_guess < Constants.NB_POSSIBLE_KEY_GUESSES; key_guess++) {
+        double hypotheticalPowerConsumptions[][] = new double[Constants.NbPossibleQueryGuesses][numOfTraces];
+        for (int key_guess = 0; key_guess < Constants.NbPossibleQueryGuesses; key_guess++) {
             hypotheticalPowerConsumptions[key_guess] =
                     IntermediateValuesToPowerConsumptions(
                             CreateIntermediateValuesVector(plaintexts, key_guess, byteNumber))
@@ -75,12 +75,12 @@ class PowerConsumptionAttack {
         }
         assertShape(hypotheticalPowerConsumptions, "hypotheticalPowerConsumptions");
 
-        double[][] R = new double[Constants.NB_POSSIBLE_KEY_GUESSES][traceLength];
+        double[][] R = new double[Constants.NbPossibleQueryGuesses][traceLength];
         System.out.println("flipping matrix");
 
         System.out.println("calculating correlation...");
         double currentHypotheticalVec[];
-        for (int currentKeyGuess = 0; currentKeyGuess < Constants.NB_POSSIBLE_KEY_GUESSES; currentKeyGuess++) {
+        for (int currentKeyGuess = 0; currentKeyGuess < Constants.NbPossibleQueryGuesses; currentKeyGuess++) {
             currentHypotheticalVec = hypotheticalPowerConsumptions[currentKeyGuess];
             for (int currentTimestamp = 0; currentTimestamp < traceLength; currentTimestamp++) {
                 R[currentKeyGuess][currentTimestamp] =
@@ -89,7 +89,7 @@ class PowerConsumptionAttack {
                                 tracesColumnFirst[currentTimestamp]
                         );
             }
-            Utils.printArray(R[currentKeyGuess]);
+//            Utils.printArray(R[currentKeyGuess]);
         }
         assertShape(R, "R (correlations)"); // shape is (KEY-GUESS x TIMESTAMP) -> CORRELATION
                                             // find the right key at the right time...
@@ -103,6 +103,7 @@ class PowerConsumptionAttack {
                 }
             }
         }
+        System.out.printf("Max correlation: %f", max);
         return keyByte;
     }
 }

@@ -4,15 +4,13 @@ import java.util.List;
 public class ex02_M2 {
 
     public static void main(String[] args) {
-        final String USERNAME = "tom";
-        final String SERVER_URL = String.format("http://aoi.ise.bgu.ac.il/encrypt?user=%s/", USERNAME);
-        final int NB_TRACES = 10000;
+        final String SERVER_URL = String.format(Constants.RequestTracesUrl, Constants.Username);
 
         try {
             String filename = args[0];
 
             System.out.println("downloading traces...");
-            String inputData = Utils.DownloadTraces(SERVER_URL, NB_TRACES);
+            String inputData = Utils.DownloadTraces(SERVER_URL, Constants.NbTraces);
             System.out.println("saving traces...");
             Utils.SaveStringToFile(inputData, filename);
             System.out.println("parsing plaintext...");
@@ -22,7 +20,7 @@ public class ex02_M2 {
 
             System.out.println("parsing traces...");
             double[][] traces = Utils.ParseTracesTimestampFirst(inputLines); // traceLength x numOfTraces
-            byte[] key = new byte[Constants.KEY_SIZE];
+            byte[] key = new byte[Constants.KeyLength];
             for (int i = 0; i < key.length; i++) {
                 key[i] = (byte) PowerConsumptionAttack.GuessKeyByte(plaintexts, traces, i);
             }
@@ -31,11 +29,10 @@ public class ex02_M2 {
                 System.out.printf("%x", key[i]);
             }
             System.out.println();
-
+            System.out.printf("key correct: %b\n", Utils.VerifyKey(key));
         } catch(Exception e) {
             e.printStackTrace();
             System.out.println("an error occured.");
         }
     }
-
 }
