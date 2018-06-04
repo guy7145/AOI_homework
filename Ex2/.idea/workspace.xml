@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c89a5aec-5c45-406f-867a-601bc377ddf5" name="Default" comment="" />
+    <list default="true" id="c89a5aec-5c45-406f-867a-601bc377ddf5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PowerConsumptionAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PowerConsumptionAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Statistics.java" afterDir="false" />
+    </list>
     <ignored path="Ex2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,7 +30,7 @@
       <file leaf-file-name="ex02_M2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ex02_M2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
+            <state relative-caret-position="187">
               <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -36,22 +42,44 @@
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="187">
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PowerConsumptionAttack.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PowerConsumptionAttack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PowerConsumptionAttack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="72" column="80" selection-start-line="72" selection-start-column="80" selection-end-line="72" selection-end-column="80" />
+            <state relative-caret-position="226">
+              <caret line="76" column="46" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
               <folding>
                 <element signature="n#!!doc;n#AesSbox#0;n#PowerConsumptionAttack#0" />
+                <element signature="method#KeyDependantOperation#0;class#PowerConsumptionAttack#0" />
+                <element signature="method#hypotheticalPowerConsumptions#0;class#PowerConsumptionAttack#0" />
                 <element signature="method#assertShape#0;class#PowerConsumptionAttack#0" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Statistics.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Statistics.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+              <folding>
+                <element signature="method#CalcCovariance#0;class#Statistics#0" />
+                <element signature="method#Correlation#0;class#Statistics#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="traces.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/traces.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5355" />
           </provider>
         </entry>
       </file>
@@ -69,9 +97,12 @@
       <find>!</find>
       <find>HammingWeight</find>
       <find>max correlation:</find>
-      <find>Max correlation</find>
       <find>max corre</find>
+      <find>Max correlation</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -84,12 +115,12 @@
         <option value="$PROJECT_DIR$/src/test/java/ex02_M1.java" />
         <option value="$PROJECT_DIR$/src/ex02_M1.java" />
         <option value="$PROJECT_DIR$/src/Backend.java" />
-        <option value="$PROJECT_DIR$/src/Statistics.java" />
         <option value="$PROJECT_DIR$/traces.txt" />
         <option value="$PROJECT_DIR$/src/Utils.java" />
         <option value="$PROJECT_DIR$/src/ex02_M2.java" />
         <option value="$PROJECT_DIR$/src/Constants.java" />
         <option value="$PROJECT_DIR$/src/PowerConsumptionAttack.java" />
+        <option value="$PROJECT_DIR$/src/Statistics.java" />
       </list>
     </option>
   </component>
@@ -111,6 +142,7 @@
     <option name="width" value="1932" />
     <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -539,6 +571,14 @@
       <workItem from="1528060570844" duration="4316000" />
       <workItem from="1528100940250" duration="10815000" />
     </task>
+    <task id="LOCAL-00001" summary="before refactoring">
+      <created>1528152136384</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1528152136384</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -554,14 +594,15 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005342" side_tool="true" visible="true" weight="0.4928493" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.49356222" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946582" visible="true" weight="0.4928493" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12004175" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12286325" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -572,7 +613,6 @@
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32913387" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
@@ -587,6 +627,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="before refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="before refactoring" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -632,6 +676,8 @@
           <caret line="108" selection-start-line="108" selection-end-line="108" />
           <folding>
             <element signature="n#!!doc;n#AesSbox#0;n#PowerConsumptionAttack#0" />
+            <element signature="method#KeyDependantOperation#0;class#PowerConsumptionAttack#0" />
+            <element signature="method#hypotheticalPowerConsumptions#0;class#PowerConsumptionAttack#0" />
             <element signature="method#assertShape#0;class#PowerConsumptionAttack#0" />
           </folding>
         </state>
@@ -652,6 +698,8 @@
           <caret line="117" selection-start-line="117" selection-end-line="117" />
           <folding>
             <element signature="n#!!doc;n#AesSbox#0;n#PowerConsumptionAttack#0" />
+            <element signature="method#KeyDependantOperation#0;class#PowerConsumptionAttack#0" />
+            <element signature="method#hypotheticalPowerConsumptions#0;class#PowerConsumptionAttack#0" />
             <element signature="method#assertShape#0;class#PowerConsumptionAttack#0" />
           </folding>
         </state>
@@ -667,6 +715,8 @@
           <caret line="109" selection-start-line="109" selection-end-line="109" />
           <folding>
             <element signature="n#!!doc;n#AesSbox#0;n#PowerConsumptionAttack#0" />
+            <element signature="method#KeyDependantOperation#0;class#PowerConsumptionAttack#0" />
+            <element signature="method#hypotheticalPowerConsumptions#0;class#PowerConsumptionAttack#0" />
             <element signature="method#assertShape#0;class#PowerConsumptionAttack#0" />
           </folding>
         </state>
@@ -692,6 +742,8 @@
           <caret line="88" selection-start-line="88" selection-end-line="88" />
           <folding>
             <element signature="n#!!doc;n#AesSbox#0;n#PowerConsumptionAttack#0" />
+            <element signature="method#KeyDependantOperation#0;class#PowerConsumptionAttack#0" />
+            <element signature="method#hypotheticalPowerConsumptions#0;class#PowerConsumptionAttack#0" />
             <element signature="method#assertShape#0;class#PowerConsumptionAttack#0" />
           </folding>
         </state>
@@ -709,6 +761,8 @@
         <state>
           <folding>
             <element signature="n#!!doc;n#AesSbox#0;n#PowerConsumptionAttack#0" />
+            <element signature="method#KeyDependantOperation#0;class#PowerConsumptionAttack#0" />
+            <element signature="method#hypotheticalPowerConsumptions#0;class#PowerConsumptionAttack#0" />
             <element signature="method#assertShape#0;class#PowerConsumptionAttack#0" />
           </folding>
         </state>
@@ -747,19 +801,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Statistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="method#CalcMean#0;class#Statistics#0" />
-            <element signature="method#CalcCovariance#0;class#Statistics#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_51/src.zip!/javax/rmi/CORBA/Util.java" />
-    <entry file="file://$PROJECT_DIR$/traces.txt" />
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_171/src.zip!/java/io/PrintStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
@@ -802,7 +844,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ex02_M2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
+        <state relative-caret-position="187">
           <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -812,18 +854,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="187">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traces.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5355" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PowerConsumptionAttack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="72" column="80" selection-start-line="72" selection-start-column="80" selection-end-line="72" selection-end-column="80" />
+        <state relative-caret-position="226">
+          <caret line="76" column="46" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
           <folding>
             <element signature="n#!!doc;n#AesSbox#0;n#PowerConsumptionAttack#0" />
+            <element signature="method#KeyDependantOperation#0;class#PowerConsumptionAttack#0" />
+            <element signature="method#hypotheticalPowerConsumptions#0;class#PowerConsumptionAttack#0" />
             <element signature="method#assertShape#0;class#PowerConsumptionAttack#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Statistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+          <folding>
+            <element signature="method#CalcCovariance#0;class#Statistics#0" />
+            <element signature="method#Correlation#0;class#Statistics#0" />
           </folding>
         </state>
       </provider>

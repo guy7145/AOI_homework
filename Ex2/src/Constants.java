@@ -9,7 +9,7 @@ public class Constants {
     public static final String PasswordIncorrect = "0";
 
     public static final String Username = "tom";
-    public static final int NbTraces = 10000;
+    public static final int NbTraces = 25000;
 
     public static final String ServerUrl = "http://aoi.ise.bgu.ac.il/";
     public static final String RequestTracesUrl = ServerUrl + "encrypt?user=%s/";

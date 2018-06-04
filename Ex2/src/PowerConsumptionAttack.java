@@ -20,30 +20,22 @@ class PowerConsumptionAttack {
     };
     //    endregion
 
-    static int DataDependantOperation(byte d, byte k) {
-        int xorRes = 0xff & (d ^ k);
-//        System.out.printf("sbox[%02x ^ %02x (= %02x)] = %02x\n", d, k, xorRes, AesSbox[xorRes]);
-        return AesSbox[xorRes];
-    }
-
-    public static int[] CreateIntermediateValuesVector(byte[][] plaintexts, int key_guess, int byte_number) {
-        int[] vec = new int[plaintexts.length];
-        for (int i = 0; i < plaintexts.length; i++) {
-            vec[i] = DataDependantOperation(plaintexts[i][byte_number], (byte) key_guess);
-        }
-        return vec;
-    }
-
     public static int HammingWeight(int num) {
         if (num > 0xff) System.out.printf("HammingWeight: %x is larger than one byte!\n", num);
-        int weight = Integer.bitCount(num);
-        return weight;
+        int weight = Integer.bitCount(num) / Constants.NbBitsInByte;
+        return weight * 256;
     }
 
-    public static double[] IntermediateValuesToPowerConsumptions(int[] v) {
-        double[] H = new double[v.length];
-        for (int i = 0; i < v.length; i++) H[i] = HammingWeight(v[i]);
-        return H;
+    static double KeyDependantOperation(byte d, byte k) {
+        int xorRes = 0xff & (d ^ k);
+//        System.out.printf("sbox[%02x ^ %02x (= %02x)] = %02x\n", d, k, xorRes, AesSbox[xorRes]);
+        return HammingWeight(AesSbox[xorRes]);
+    }
+
+    public static double[] HypotheticalPowerConsumptions(byte[][] plaintexts, int key_guess, int byte_number) {
+        double[] vec = new double[plaintexts.length];
+        for (int i = 0; i < plaintexts.length; i++) vec[i] = KeyDependantOperation(plaintexts[i][byte_number], (byte) (0xff & key_guess));
+        return vec;
     }
 
     private static void assertShape(double[][] mat, String name) throws Exception {
@@ -62,20 +54,18 @@ class PowerConsumptionAttack {
     static int GuessKeyByte(byte[][] plaintexts, double[][] tracesColumnFirst, int byteNumber) throws Exception {
         final int traceLength = tracesColumnFirst.length;
         final int numOfTraces = tracesColumnFirst[0].length;
+
         assertShape(tracesColumnFirst, "tracesColumnFirst");
         System.out.printf("there are %d plaintexts\n", plaintexts.length);
 
         System.out.println("creating hypothetical power consumption...");
         double hypotheticalPowerConsumptions[][] = new double[Constants.NbPossibleQueryGuesses][numOfTraces];
         for (int key_guess = 0; key_guess < Constants.NbPossibleQueryGuesses; key_guess++) {
-            hypotheticalPowerConsumptions[key_guess] =
-                    IntermediateValuesToPowerConsumptions(
-                            CreateIntermediateValuesVector(plaintexts, key_guess, byteNumber))
-            ;
+            hypotheticalPowerConsumptions[key_guess] = HypotheticalPowerConsumptions(plaintexts, key_guess, byteNumber);
         }
-        assertShape(hypotheticalPowerConsumptions, "hypotheticalPowerConsumptions");
+        assertShape(hypotheticalPowerConsumptions, "HypotheticalPowerConsumptions");
 
-        double[][] R = new double[Constants.NbPossibleQueryGuesses][traceLength];
+        double[][] correlations = new double[Constants.NbPossibleQueryGuesses][traceLength];
         System.out.println("flipping matrix");
 
         System.out.println("calculating correlation...");
@@ -83,22 +73,22 @@ class PowerConsumptionAttack {
         for (int currentKeyGuess = 0; currentKeyGuess < Constants.NbPossibleQueryGuesses; currentKeyGuess++) {
             currentHypotheticalVec = hypotheticalPowerConsumptions[currentKeyGuess];
             for (int currentTimestamp = 0; currentTimestamp < traceLength; currentTimestamp++) {
-                R[currentKeyGuess][currentTimestamp] =
-                        Statistics.PearsonCorrCoef(
+                correlations[currentKeyGuess][currentTimestamp] =
+                        Statistics.Correlation(
                                 currentHypotheticalVec,
                                 tracesColumnFirst[currentTimestamp]
                         );
             }
 //            Utils.printArray(R[currentKeyGuess]);
         }
-        assertShape(R, "R (correlations)"); // shape is (KEY-GUESS x TIMESTAMP) -> CORRELATION
+        assertShape(correlations, "correlations"); // shape is (KEY-GUESS x TIMESTAMP) -> CORRELATION
                                             // find the right key at the right time...
         double max = -1;
         int keyByte = -1;
-        for (int i = 0; i < R.length; i++) {
-            for (int j = 0; j < R[0].length; j++) {
-                if (Math.abs(R[i][j]) > max) {
-                    max = Math.abs(R[i][j]);
+        for (int i = 0; i < correlations.length; i++) {
+            for (int j = 0; j < correlations[0].length; j++) {
+                if (Math.abs(correlations[i][j]) > max) {
+                    max = Math.abs(correlations[i][j]);
                     keyByte = i;
                 }
             }
