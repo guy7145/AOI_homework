@@ -1,6 +1,8 @@
+import static java.lang.Integer.bitCount;
+
 class PowerConsumptionAttack {
     //    region AES S-box
-    static int[] AesSbox = {
+    private static int[] AesSbox = {
             0x63,0x7c,0x77,0x7b,0xf2,0x6b,0x6f,0xc5,0x30,0x01,0x67,0x2b,0xfe,0xd7,0xab,0x76,
             0xca,0x82,0xc9,0x7d,0xfa,0x59,0x47,0xf0,0xad,0xd4,0xa2,0xaf,0x9c,0xa4,0x72,0xc0,
             0xb7,0xfd,0x93,0x26,0x36,0x3f,0xf7,0xcc,0x34,0xa5,0xe5,0xf1,0x71,0xd8,0x31,0x15,
@@ -20,19 +22,18 @@ class PowerConsumptionAttack {
     };
     //    endregion
 
-    public static int HammingWeight(int num) {
+    private static int HammingWeight(int num) {
         if (num > 0xff) System.out.printf("HammingWeight: %x is larger than one byte!\n", num);
-        int weight = Integer.bitCount(num) / Constants.NbBitsInByte;
-        return weight * 256;
+        return bitCount(num);
     }
 
-    static double KeyDependantOperation(byte d, byte k) {
+    private static double KeyDependantOperation(byte d, byte k) {
         int xorRes = 0xff & (d ^ k);
 //        System.out.printf("sbox[%02x ^ %02x (= %02x)] = %02x\n", d, k, xorRes, AesSbox[xorRes]);
         return HammingWeight(AesSbox[xorRes]);
     }
 
-    public static double[] HypotheticalPowerConsumptions(byte[][] plaintexts, int key_guess, int byte_number) {
+    private static double[] HypotheticalPowerConsumptions(byte[][] plaintexts, int key_guess, int byte_number) {
         double[] vec = new double[plaintexts.length];
         for (int i = 0; i < plaintexts.length; i++) vec[i] = KeyDependantOperation(plaintexts[i][byte_number], (byte) (0xff & key_guess));
         return vec;
@@ -44,8 +45,8 @@ class PowerConsumptionAttack {
         for (int i = 0; i < nbRows; i++) {
             if (mat[i].length != nbCols) throw new Exception(
                     String.format(
-                            "matrix of shape (%d, %d) has an inner array with %d columns",
-                            nbRows, nbCols, mat[i].length)
+                            "matrix of shape (%d, %d) has an inner array (index %d) with %d columns",
+                            nbRows, nbCols, i, mat[i].length)
             );
         }
         System.out.printf("%s has shape: (%d, %d)\n", name, nbRows, nbCols);
@@ -74,12 +75,11 @@ class PowerConsumptionAttack {
             currentHypotheticalVec = hypotheticalPowerConsumptions[currentKeyGuess];
             for (int currentTimestamp = 0; currentTimestamp < traceLength; currentTimestamp++) {
                 correlations[currentKeyGuess][currentTimestamp] =
-                        Statistics.Correlation(
+                        Statistics.PearsonCorrCoef(
                                 currentHypotheticalVec,
                                 tracesColumnFirst[currentTimestamp]
                         );
             }
-//            Utils.printArray(R[currentKeyGuess]);
         }
         assertShape(correlations, "correlations"); // shape is (KEY-GUESS x TIMESTAMP) -> CORRELATION
                                             // find the right key at the right time...
@@ -93,7 +93,7 @@ class PowerConsumptionAttack {
                 }
             }
         }
-        System.out.printf("Max correlation: %f", max);
+        System.out.printf("Max correlation: %f\n", max);
         return keyByte;
     }
 }

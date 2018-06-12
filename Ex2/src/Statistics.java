@@ -39,49 +39,34 @@ public class Statistics {
     }
 
     static double PearsonCorrCoef(double[] a, double[] b) throws Exception {
-//        System.out.printf("a.length: %d, b.length: %d\n", a.length, b.length);
         double meanA = CalcMean(a);
         double meanB = CalcMean(b);
         double varA = CalcVariance(a, meanA);
         double varB = CalcVariance(b, meanB);
         double cov = CalcCovariance(a, b, meanA, meanB);
+
+
 //        Utils.printArray(a);
 //        Utils.printArray(b);
 //        System.out.println(cov / Math.sqrt(varA * varB));
 //        System.out.println("---");
+
+//        System.out.printf(
+//                        "       a   b\n" +
+//                        "len:   %d  %d\n" +
+//                        "mean:  %f  %f\n" +
+//                        "var:   %f  %f\n" +
+//                        "cov = %f\n" +
+//                        "----\n\n"
+//                ,
+//                a.length,
+//                b.length,
+//                meanA,
+//                meanB,
+//                varA,
+//                varB,
+//                cov);
+
         return cov / Math.sqrt(varA * varB);
-    }
-
-    public static double Correlation(double[] xs, double[] ys) {
-        //TODO: check here that arrays are not null, of the same length etc
-
-        double sx = 0.0;
-        double sy = 0.0;
-        double sxx = 0.0;
-        double syy = 0.0;
-        double sxy = 0.0;
-
-        int n = xs.length;
-
-        for(int i = 0; i < n; ++i) {
-            double x = xs[i];
-            double y = ys[i];
-
-            sx += x;
-            sy += y;
-            sxx += x * x;
-            syy += y * y;
-            sxy += x * y;
-        }
-
-        // covariation
-        double cov = sxy / n - sx * sy / n / n;
-        // standard error of x
-        double sigmax = Math.sqrt(sxx / n -  sx * sx / n / n);
-        // standard error of y
-        double sigmay = Math.sqrt(syy / n -  sy * sy / n / n);
-
-        // correlation is just a normalized covariation
-        return cov / sigmax / sigmay;
     }
 }
