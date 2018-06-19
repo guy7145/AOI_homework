@@ -73,6 +73,10 @@ class Utils {
         int commaIdx = json.indexOf(',');
         int ddIdx = json.indexOf(':');
         String hexString = json.substring(ddIdx+2, commaIdx-1);
+        // hexString.length() < Constants.PlaintextStringLength
+        for (int i = hexString.length(); i < Constants.PlaintextStringLength; i++) {
+            hexString = "0" + hexString;
+        }
         return hexStringToByteArray(hexString);
     }
 
@@ -127,7 +131,6 @@ class Utils {
         double[][] res = new double[origCols][origRows];
 
         for (int i = 0; i < origRows; i++) {
-//            System.out.printf("length: %d\n", mat[i].length);
             for (int j = 0; j < origCols; j++) {
                 double a = mat[i][j];
                 res[j][i] = a;

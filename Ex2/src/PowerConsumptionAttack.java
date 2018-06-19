@@ -23,13 +23,11 @@ class PowerConsumptionAttack {
     //    endregion
 
     private static int HammingWeight(int num) {
-        if (num > 0xff) System.out.printf("HammingWeight: %x is larger than one byte!\n", num);
         return bitCount(num);
     }
 
     private static double KeyDependantOperation(byte d, byte k) {
         int xorRes = 0xff & (d ^ k);
-//        System.out.printf("sbox[%02x ^ %02x (= %02x)] = %02x\n", d, k, xorRes, AesSbox[xorRes]);
         return HammingWeight(AesSbox[xorRes]);
     }
 
@@ -49,7 +47,6 @@ class PowerConsumptionAttack {
                             nbRows, nbCols, i, mat[i].length)
             );
         }
-        System.out.printf("%s has shape: (%d, %d)\n", name, nbRows, nbCols);
     }
 
     static int GuessKeyByte(byte[][] plaintexts, double[][] tracesColumnFirst, int byteNumber) throws Exception {
@@ -57,9 +54,7 @@ class PowerConsumptionAttack {
         final int numOfTraces = tracesColumnFirst[0].length;
 
         assertShape(tracesColumnFirst, "tracesColumnFirst");
-        System.out.printf("there are %d plaintexts\n", plaintexts.length);
 
-        System.out.println("creating hypothetical power consumption...");
         double hypotheticalPowerConsumptions[][] = new double[Constants.NbPossibleQueryGuesses][numOfTraces];
         for (int key_guess = 0; key_guess < Constants.NbPossibleQueryGuesses; key_guess++) {
             hypotheticalPowerConsumptions[key_guess] = HypotheticalPowerConsumptions(plaintexts, key_guess, byteNumber);
@@ -67,9 +62,7 @@ class PowerConsumptionAttack {
         assertShape(hypotheticalPowerConsumptions, "HypotheticalPowerConsumptions");
 
         double[][] correlations = new double[Constants.NbPossibleQueryGuesses][traceLength];
-        System.out.println("flipping matrix");
 
-        System.out.println("calculating correlation...");
         double currentHypotheticalVec[];
         for (int currentKeyGuess = 0; currentKeyGuess < Constants.NbPossibleQueryGuesses; currentKeyGuess++) {
             currentHypotheticalVec = hypotheticalPowerConsumptions[currentKeyGuess];
@@ -93,7 +86,6 @@ class PowerConsumptionAttack {
                 }
             }
         }
-        System.out.printf("Max correlation: %f\n", max);
         return keyByte;
     }
 }

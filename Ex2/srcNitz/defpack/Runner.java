@@ -10,7 +10,7 @@ import parser.JSONParser;
 
 public class Runner {
 
-	private static final String USERNAME = "hello";
+	private static final String USERNAME = "bazwsx";
     private static int KEY_SIZE = 16;
     private static BufferedWriter output;
 

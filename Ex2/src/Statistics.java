@@ -44,29 +44,6 @@ public class Statistics {
         double varA = CalcVariance(a, meanA);
         double varB = CalcVariance(b, meanB);
         double cov = CalcCovariance(a, b, meanA, meanB);
-
-
-//        Utils.printArray(a);
-//        Utils.printArray(b);
-//        System.out.println(cov / Math.sqrt(varA * varB));
-//        System.out.println("---");
-
-//        System.out.printf(
-//                        "       a   b\n" +
-//                        "len:   %d  %d\n" +
-//                        "mean:  %f  %f\n" +
-//                        "var:   %f  %f\n" +
-//                        "cov = %f\n" +
-//                        "----\n\n"
-//                ,
-//                a.length,
-//                b.length,
-//                meanA,
-//                meanB,
-//                varA,
-//                varB,
-//                cov);
-
         return cov / Math.sqrt(varA * varB);
     }
 }
