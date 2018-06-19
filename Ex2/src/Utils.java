@@ -27,9 +27,10 @@ class Utils {
     }
 
     static List<String> DownloadTraces(String SERVER_URL, int NB_TRACES) throws Exception {
+        String jsonString;
         List<String> traces = new LinkedList<>();
         for (int i = 0; i < NB_TRACES; i++) {
-            String jsonString = HttpGet(SERVER_URL);
+            jsonString = HttpGet(SERVER_URL);
             traces.add(jsonString);
         }
         return traces;
@@ -86,7 +87,6 @@ class Utils {
 
     static void DownloadAndSaveTraces(String SERVER_URL, int NB_TRACES, String filename) throws Exception {
         List<String> traces = DownloadTraces(SERVER_URL, NB_TRACES);
-        List<String> inputLines = Utils.DownloadTraces(SERVER_URL, Constants.NbTraces);
         SaveLinesToFile(traces, filename);
     }
 

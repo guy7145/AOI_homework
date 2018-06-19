@@ -10,10 +10,10 @@ public class Constants {
     public static final String PasswordCorrect = "1";
     public static final String PasswordIncorrect = "0";
 
-    public static final String Username = "bazwsx";
+    public static final String Username = "guy";
     public static final int NbTraces = 6000;
 
     public static final String ServerUrl = "http://aoi.ise.bgu.ac.il/";
-    public static final String RequestTracesUrl = ServerUrl + "encrypt?user=%s/";
-    public static final String VerifyUrl = ServerUrl + "verify?user=%s&key=%s/";
+    public static final String RequestTracesUrl = ServerUrl + "encrypt?user=%s";
+    public static final String VerifyUrl = ServerUrl + "verify?user=%s&key=%s";
 }
