@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c89a5aec-5c45-406f-867a-601bc377ddf5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ex02_M2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex02_M2.java" afterDir="false" />
     </list>
     <ignored path="Ex2.iws" />
@@ -26,13 +24,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ex02_M2.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ex02_M2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ex02_M2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            <state relative-caret-position="340">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#plotExperiment#0;class#ex02_M2#0" />
+                <element signature="method#FindKeyFromInputLines#0;class#ex02_M2#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_171/src.zip!/java/util/LinkedList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="243" selection-start-line="243" selection-end-line="243" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="71" lean-forward="true" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#VerifyKey#0;class#Utils#0" />
+                <element signature="method#ByteArrayToHex#0;class#Utils#0" />
+                <element signature="method#hexStringToByteArray#0;class#Utils#0" />
+                <element signature="method#jsonStringToDoubleArray#0;class#Utils#0" />
+                <element signature="method#ReadTracesFromFile#0;class#Utils#0" />
+                <element signature="method#FlipMatrix#0;class#Utils#0" />
+                <element signature="method#printArray#0;class#Utils#0" />
+                <element signature="method#printArray#1;class#Utils#0" />
               </folding>
             </state>
           </provider>
@@ -615,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529422248534</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="good makin experiment">
+      <created>1529425045172</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1529425045172</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -634,11 +679,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5063966" side_tool="true" visible="true" weight="0.36580086" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4936034" visible="true" weight="0.36580086" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4936034" visible="true" weight="0.36580086" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12526652" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12526652" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -673,7 +718,8 @@
     <MESSAGE value="zsdfdas" />
     <MESSAGE value="changing types" />
     <MESSAGE value="ok what?" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok what?" />
+    <MESSAGE value="good makin experiment" />
+    <option name="LAST_COMMIT_MESSAGE" value="good makin experiment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -685,36 +731,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ex02_M2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#HttpGet#0;class#Utils#0" />
-            <element signature="e#1315#1317#0" />
-            <element signature="method#SaveStringToFile#0;class#Utils#0" />
-            <element signature="method#jsonStringToPlaintext#0;class#Utils#0" />
-            <element signature="method#LoadFileLines#0;class#Utils#0" />
-            <element signature="method#ParseTracesTimestampFirst#0;class#Utils#0" />
-            <element signature="method#ReadTracesFromFile#0;class#Utils#0" />
-            <element signature="method#FlipMatrix#0;class#Utils#0" />
-            <element signature="method#printArray#0;class#Utils#0" />
-            <element signature="method#printArray#1;class#Utils#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PowerConsumptionAttack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1666">
@@ -730,6 +746,8 @@
         <state>
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#plotExperiment#0;class#ex02_M2#0" />
+            <element signature="method#FindKeyFromInputLines#0;class#ex02_M2#0" />
           </folding>
         </state>
       </provider>
@@ -764,6 +782,8 @@
           <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#plotExperiment#0;class#ex02_M2#0" />
+            <element signature="method#FindKeyFromInputLines#0;class#ex02_M2#0" />
           </folding>
         </state>
       </provider>
@@ -957,15 +977,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+        <state relative-caret-position="178">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#VerifyKey#0;class#Utils#0" />
             <element signature="method#ByteArrayToHex#0;class#Utils#0" />
             <element signature="method#hexStringToByteArray#0;class#Utils#0" />
             <element signature="method#jsonStringToDoubleArray#0;class#Utils#0" />
-            <element signature="method#ParseTracesTimestampFirst#0;class#Utils#0" />
             <element signature="method#ReadTracesFromFile#0;class#Utils#0" />
             <element signature="method#FlipMatrix#0;class#Utils#0" />
             <element signature="method#printArray#0;class#Utils#0" />
@@ -974,20 +993,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Constants.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_171/src.zip!/java/util/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="186">
+          <caret line="243" selection-start-line="243" selection-end-line="243" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matan id.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ex02_M2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#plotExperiment#0;class#ex02_M2#0" />
+            <element signature="method#FindKeyFromInputLines#0;class#ex02_M2#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="71" lean-forward="true" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
         </state>
       </provider>
     </entry>
