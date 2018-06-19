@@ -26,19 +26,23 @@ class Utils {
         else throw new Exception(String.format("Unknown response: %s", response));
     }
 
-    static String DownloadTraces(String SERVER_URL, int NB_TRACES) throws Exception {
-        StringBuilder fileBuilder = new StringBuilder();
+    static List<String> DownloadTraces(String SERVER_URL, int NB_TRACES) throws Exception {
+        List<String> traces = new LinkedList<>();
         for (int i = 0; i < NB_TRACES; i++) {
             String jsonString = HttpGet(SERVER_URL);
-            fileBuilder.append(jsonString);
-            fileBuilder.append(System.lineSeparator());
+            traces.add(jsonString);
         }
-        return fileBuilder.toString();
+        return traces;
     }
 
-    public static void SaveStringToFile(String data, String filename) throws Exception {
+    public static void SaveLinesToFile(List<String> lines, String filename) throws Exception {
+        StringBuilder sb = new StringBuilder();
+        for (String line: lines) {
+            sb.append(line);
+            sb.append("\n");
+        }
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
-            writer.write(data);
+            writer.write(sb.toString());
         }
     }
 
@@ -81,8 +85,9 @@ class Utils {
     }
 
     static void DownloadAndSaveTraces(String SERVER_URL, int NB_TRACES, String filename) throws Exception {
-        String traces = DownloadTraces(SERVER_URL, NB_TRACES);
-        SaveStringToFile(traces, filename);
+        List<String> traces = DownloadTraces(SERVER_URL, NB_TRACES);
+        List<String> inputLines = Utils.DownloadTraces(SERVER_URL, Constants.NbTraces);
+        SaveLinesToFile(traces, filename);
     }
 
     static List<String> LoadFileLines(String filename) throws IOException {

@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c89a5aec-5c45-406f-867a-601bc377ddf5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PowerConsumptionAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PowerConsumptionAttack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Statistics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ex02_M2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex02_M2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcNitz/defpack/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/srcNitz/defpack/Runner.java" afterDir="false" />
     </list>
     <ignored path="Ex2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,51 +26,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ex02_M2.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ex02_M2.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ex02_M2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+            <state relative-caret-position="238">
+              <caret line="14" column="56" lean-forward="true" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PowerConsumptionAttack.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PowerConsumptionAttack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="35" column="136" selection-start-line="35" selection-start-column="136" selection-end-line="35" selection-end-column="136" />
-              <folding>
-                <element signature="e#1699#1700#0" expanded="true" />
-                <element signature="e#1735#1736#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#HttpGet#0;class#Utils#0" />
-                <element signature="method#VerifyKey#0;class#Utils#0" />
-                <element signature="method#SaveStringToFile#0;class#Utils#0" />
-                <element signature="method#ByteArrayToHex#0;class#Utils#0" />
-                <element signature="method#hexStringToByteArray#0;class#Utils#0" />
-                <element signature="method#jsonStringToDoubleArray#0;class#Utils#0" />
-                <element signature="method#DownloadAndSaveTraces#0;class#Utils#0" />
-                <element signature="method#LoadFileLines#0;class#Utils#0" />
-                <element signature="method#ParseTracesTimestampFirst#0;class#Utils#0" />
-                <element signature="method#ReadTracesFromFile#0;class#Utils#0" />
-                <element signature="method#FlipMatrix#0;class#Utils#0" />
-                <element signature="method#printArray#0;class#Utils#0" />
-                <element signature="method#printArray#1;class#Utils#0" />
               </folding>
             </state>
           </provider>
@@ -82,29 +41,8 @@
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ex02_M2_Nitz.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/srcNitz/ex02_M2_Nitz.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/srcNitz/defpack/Runner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-296">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="272">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -134,6 +72,7 @@
       <find>0&quot;</find>
       <find>00&quot;</find>
       <find>&quot;0</find>
+      <find>byte</find>
       <find>print</find>
     </findStrings>
   </component>
@@ -156,12 +95,12 @@
         <option value="$PROJECT_DIR$/srcNitz/ex02_M2.java" />
         <option value="$PROJECT_DIR$/srcNitz/ex02_M2_Nitz.java" />
         <option value="$PROJECT_DIR$/traces.txt" />
-        <option value="$PROJECT_DIR$/src/Statistics.java" />
-        <option value="$PROJECT_DIR$/src/Utils.java" />
         <option value="$PROJECT_DIR$/srcNitz/defpack/Runner.java" />
+        <option value="$PROJECT_DIR$/src/Statistics.java" />
+        <option value="$PROJECT_DIR$/src/PowerConsumptionAttack.java" />
+        <option value="$PROJECT_DIR$/src/Utils.java" />
         <option value="$PROJECT_DIR$/src/Constants.java" />
         <option value="$PROJECT_DIR$/src/ex02_M2.java" />
-        <option value="$PROJECT_DIR$/src/PowerConsumptionAttack.java" />
       </list>
     </option>
   </component>
@@ -670,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528798182255</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changing types">
+      <created>1529419354737</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1529419354737</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -682,18 +628,18 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4978678" weight="0.32683983" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4968017" weight="0.32683983" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5042644" side_tool="true" visible="true" weight="0.13095239" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5053305" side_tool="true" visible="true" weight="0.36580086" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49573562" visible="true" weight="0.13095239" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4946695" visible="true" weight="0.36580086" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12526652" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12526652" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -726,7 +672,8 @@
     <MESSAGE value="ASDASD" />
     <MESSAGE value="added nitzan code" />
     <MESSAGE value="zsdfdas" />
-    <option name="LAST_COMMIT_MESSAGE" value="zsdfdas" />
+    <MESSAGE value="changing types" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing types" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -738,20 +685,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/srcNitz/defpack/Encryption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ex02_M1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PowerConsumptionAttack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1054">
@@ -966,6 +899,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/srcNitz/defpack/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-296">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcNitz/ex02_M2_Nitz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PowerConsumptionAttack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+          <folding>
+            <element signature="e#1699#1700#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_171/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="650" column="26" selection-start-line="650" selection-start-column="26" selection-end-line="650" selection-end-column="26" />
+          <folding>
+            <element signature="e#26565#26566#0" expanded="true" />
+            <element signature="e#26601#26602#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_171/src.zip!/java/io/BufferedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="566" column="28" selection-start-line="566" selection-start-column="20" selection-end-line="566" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Statistics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -979,44 +958,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcNitz/defpack/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-296">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcNitz/ex02_M2_Nitz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        <state relative-caret-position="272">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        <state relative-caret-position="314">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#HttpGet#0;class#Utils#0" />
             <element signature="method#VerifyKey#0;class#Utils#0" />
-            <element signature="method#SaveStringToFile#0;class#Utils#0" />
             <element signature="method#ByteArrayToHex#0;class#Utils#0" />
             <element signature="method#hexStringToByteArray#0;class#Utils#0" />
             <element signature="method#jsonStringToDoubleArray#0;class#Utils#0" />
-            <element signature="method#DownloadAndSaveTraces#0;class#Utils#0" />
-            <element signature="method#LoadFileLines#0;class#Utils#0" />
             <element signature="method#ParseTracesTimestampFirst#0;class#Utils#0" />
             <element signature="method#ReadTracesFromFile#0;class#Utils#0" />
             <element signature="method#FlipMatrix#0;class#Utils#0" />
@@ -1028,21 +987,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ex02_M2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        <state relative-caret-position="238">
+          <caret line="14" column="56" lean-forward="true" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PowerConsumptionAttack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="35" column="136" selection-start-line="35" selection-start-column="136" selection-end-line="35" selection-end-column="136" />
-          <folding>
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1735#1736#0" expanded="true" />
           </folding>
         </state>
       </provider>

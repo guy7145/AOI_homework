@@ -10,9 +10,11 @@ public class ex02_M2 {
         try {
             String filename = args[0];
 
-//            String inputData = Utils.DownloadTraces(SERVER_URL, Constants.NbTraces);
-//            Utils.SaveStringToFile(inputData, filename);
-            List<String> inputLines = Utils.LoadFileLines(filename);
+            List<String> inputLines = Utils.DownloadTraces(SERVER_URL, Constants.NbTraces);
+//            List<String> inputLines = Utils.LoadFileLines("traces3.txt");
+            Utils.SaveLinesToFile(inputLines, filename);
+            inputLines = Utils.LoadFileLines(filename);
+
             byte[][] plaintexts = Utils.ParsePlaintexts(inputLines);
             double[][] traces = Utils.ParseTracesTimestampFirst(inputLines); // traceLength x numOfTraces
 

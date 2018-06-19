@@ -44,6 +44,7 @@ public class Statistics {
         double varA = CalcVariance(a, meanA);
         double varB = CalcVariance(b, meanB);
         double cov = CalcCovariance(a, b, meanA, meanB);
+
         return cov / Math.sqrt(varA * varB);
     }
 }
