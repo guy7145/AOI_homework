@@ -11,7 +11,7 @@ public class Constants {
     public static final String PasswordIncorrect = "0";
 
     public static final String Username = "guy";
-    public static final int NbTraces = 6000;
+    public static final int NbTraces = 5000;
 
     public static final String ServerUrl = "http://aoi.ise.bgu.ac.il/";
     public static final String RequestTracesUrl = ServerUrl + "encrypt?user=%s";
